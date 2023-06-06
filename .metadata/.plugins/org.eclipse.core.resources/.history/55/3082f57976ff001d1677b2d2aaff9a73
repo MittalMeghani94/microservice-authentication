@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id  : swiggy-service
+          uri : lb://SWIGGY-SERVICE
+          predicates:
+            - path=/swiggy-service/**
+          
+        - id : restaurant-service
+          uri : lb://RESTARURANT-SERVICE
+          predicates:
+            - path=/restarant-service
+            
+        - id : auth-service
+          uri : lb://AUTH-SERVICE
+          predicates :
+            - path=/auth-service
+         
+       

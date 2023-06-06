@@ -1,0 +1,5 @@
+package com.demo.swiggy.config;
+
+public class AppConfig {
+
+}
